@@ -8,4 +8,16 @@
 
 }
 
+header {
+    border: 2px red solid;
+    text-align: right;
+}
 
+nav ul {
+    border: 2px blue solid;
+}
+
+nav ul li {
+    display: inline;
+    padding: 3em;
+}
