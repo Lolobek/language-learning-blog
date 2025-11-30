@@ -7,6 +7,8 @@
     --primary-color   : #ff6b35;      /* Żywy pomarańcz - PASJA */
     --secondary-color : #7c3aed;      /* Fiolet - kreatywność */
     --accent-color    : #fbbf24;      /* Amber/złoto - ciepło */
+    --success-color   : #16a34a;      /* Zielony dopasowany do palety */
+    --success-hover   : #166534;      /* Ciemniejszy zielony na hover */
 }
 
 /* RESET */
@@ -320,12 +322,13 @@ section.section-3 .buttons p:first-child {
 }
 
 section.section-3 .buttons p:last-child {
-    background: var(--primary-color);
+    background: #10b981; /* zielony od startu */
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.18);
 }
 
 section.section-3 .buttons p:last-child:hover {
-    background: #10b981;
-    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3);
+    background: #059669; /* ciemniejszy zielony przy hover */
+    box-shadow: 0 6px 20px rgba(5, 150, 105, 0.28);
 }
 
 @media (max-width: 768px) {
@@ -349,11 +352,8 @@ footer {
 }
 
 section.section-3 .buttons p {
-    background-color: lightgrey;
     font-size: clamp(1rem, 1.5vw, 1.5rem);  /* z 1.25rem → 1rem */
     line-height: 1.2;
     margin-top: 5%;
-    height: 2rem;
     text-align: center;
-    text-justify: cen;
 }
