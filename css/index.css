@@ -118,6 +118,48 @@ nav ul li.active {
     border-bottom-color: var(--primary-color);
 }
 
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+    header {
+        position: relative;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav.open ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--background-color);
+        border: 1px solid var(--primary-color);
+        padding: 1rem;
+        z-index: 1000;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav.open ul li {
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+}
+
 /*      sections      */
 
 section {

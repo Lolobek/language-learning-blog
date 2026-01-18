@@ -18,6 +18,7 @@
                 <li><a href="#">Książka</a></li>
             </ul>
         </nav>
+        <button class="hamburger" aria-label="Toggle menu">☰</button>
     </header>
 
     <main>
@@ -59,6 +60,16 @@
     <footer>
         <p>&copy; 2025 Language Learning Blog. Wszystkie prawa zastrzeżone.</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('.hamburger');
+            const nav = document.querySelector('nav');
+            hamburger.addEventListener('click', () => {
+                nav.classList.toggle('open');
+            });
+        });
+    </script>
 
 </body>
 </html>
