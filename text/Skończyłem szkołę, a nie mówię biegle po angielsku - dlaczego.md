@@ -44,7 +44,7 @@ Patrząc na powyższą tabelę może zrodzić się w Twojej głowie pytanie: dla
 	To absurdalne, ale **schemat nauczania w szkołach niewiele zmienił się przez te 200 lat.** Już wtedy istniały obowiązkowe lektury, dzwonki na przerwę, lekcje trwające 45 minut czy sprawdziany.   
 	Powód nie jest tutaj istotny, liczy się fakt: **szkoła nie jest miejscem, które zrobi z Ciebie poliglotę**. Co najwyżej wmusi w Ciebie podstawy języka, ale marnując na to przeszło dekadę…
 
-Jak rzeczywiście osiągnąć językową płynność?   
+## Jak rzeczywiście osiągnąć językową płynność?   
 Przede wszystkim zmień nastawienie i to o 180 stopni. Przykro mi to mówić, ale przez lata byłeś z każdej strony otoczony przekonaniami, które chłonąłeś jak gąbka. Niestety przeczytanie jednego akapitu Cię z nich nie oczyści, ale stanowi dobry pierwszy krok.   
 	Oto niektóre z rzeczy, które powinieneś usłyszeć:
 
