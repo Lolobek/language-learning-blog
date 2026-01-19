@@ -21,7 +21,7 @@ body {
     padding: 0;
     font-family: 'Poppins', system-ui, -apple-system, sans-serif;
     font-size: clamp(0.95rem, 1.5vw, 1.1rem);
-    line-height: 1.55;
+    line-height: 1.8;
     color: var(--text-color);
     background-color: var(--background-color);
 }
@@ -32,11 +32,14 @@ h1, h2, h3, h4 {
     font-family: 'Poppins', system-ui, sans-serif;
     font-weight: 700;
     margin: 0;
+    text-align: left;
 }
 
 p {
-    margin: 0;
+    margin: 0 0 1.5em 0;
     font-weight: 400;
+    text-align: justify;
+    text-indent: 1em;
 }
 
 h1 {
@@ -47,6 +50,7 @@ h1 {
 h2 {
     font-size: clamp(1.5rem, 3.5vw, 2.8rem);
     line-height: 1.2;
+    margin: 2em 0 1em 0;
 }
 
 h3 {
@@ -478,4 +482,31 @@ section.section-3 .buttons a {
     .article-card img {
         height: 140px;
     }
+}
+
+/* ===== Table styles ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5em 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 0.75em;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: 600;
+}
+
+/* ===== List styles ===== */
+ul, ol {
+    text-align: left;
+}
+
+li {
+    text-align: left;
 }
