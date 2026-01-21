@@ -1,4 +1,4 @@
-# Dlaczego 'najlepsza metoda nauki' nie istnieje i jak w jeden wieczór zbudować własną?
+# Dlaczego 'najlepsza metoda nauki' nie istnieje i jak zbudować własną?
 
 Nikt Ci go nie zdradził, ale czujesz pod skórą, że istnieje tajemniczy sposób na nauczenie się języka w kilka miesięcy. Wiesz to. Świat próbuje to ukryć, ale koniec z tym\! Dzisiaj poznasz prawdę\!
 
