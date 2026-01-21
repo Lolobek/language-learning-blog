@@ -263,8 +263,7 @@ section.section-2 .img {
 
 section.section-2 .img img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
     border-radius: 8px;
     display: block;
 }
@@ -439,8 +438,7 @@ section.section-3 .buttons a {
 
 .article-card img {
     width: 100%;
-    height: 160px;
-    object-fit: cover;
+    height: auto;
     border-radius: 8px;
 }
 
@@ -480,7 +478,7 @@ section.section-3 .buttons a {
 
 @media (max-width: 480px) {
     .article-card img {
-        height: 140px;
+        height: auto;
     }
 }
 
