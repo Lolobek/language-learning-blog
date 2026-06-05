@@ -11,6 +11,9 @@
     margin: 2rem auto;
     max-width: 1400px;
     width: 100%;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
 .hero-content {
@@ -25,7 +28,8 @@
 .hero-title {
     color: var(--primary-color);
     font-size: clamp(1.8rem, 4vw, 3rem);
-    margin-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
 }
 
 .hero-text {
@@ -33,7 +37,7 @@
     font-size: clamp(0.95rem, 1.8vw, 1.1rem);
     line-height: 1.8;
     margin-bottom: 2rem;
-    text-align: justify;
+    text-align: center;
 }
 
 .hero-cta {
@@ -85,9 +89,12 @@
     align-items: center;
     text-align: center;
     padding: clamp(1.5rem, 3vw, 2.5rem);
-    margin: 3rem auto;
+    margin: 4rem auto;
     max-width: 1200px;
     width: 100%;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
 .section-subtitle {
@@ -144,9 +151,12 @@
     flex-direction: column;
     align-items: center;
     padding: clamp(1.5rem, 3vw, 2.5rem);
-    margin: 3rem auto;
-    max-width: 1200px;
+    margin: 4rem auto;
+    max-width: 1400px;
     width: 100%;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
 .section-title {
@@ -226,24 +236,34 @@
     align-items: center;
     text-align: center;
     padding: clamp(1.5rem, 3vw, 2.5rem);
-    margin: 3rem auto;
-    max-width: 900px;
+    margin: 4rem auto;
+    max-width: 1200px;
     width: 100%;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
 .persuasion-text {
     color: var(--text-color);
-    font-size: clamp(0.95rem, 1.8vw, 1.1rem);
-    line-height: 2;
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    line-height: 1.6;
     margin-bottom: 2rem;
-    text-align: justify;
+    text-align: center;
+    font-weight: 600;
 }
 
 .persuasion-cta {
     align-self: center;
-    max-width: 500px;
-    padding: 1rem 2rem;
-    font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+    max-width: 700px;
+    padding: 1.1rem 2.4rem;
+    font-size: clamp(1rem, 1.6vw, 1.15rem);
+    white-space: nowrap;
+    font-weight: 700;
+}
+
+.persuasion-cta {
+    white-space: nowrap;
 }
 
 /* SECTION 5: FAQ */
@@ -252,9 +272,38 @@
     flex-direction: column;
     align-items: flex-start;
     padding: clamp(1.5rem, 3vw, 2.5rem);
-    margin: 3rem auto;
-    max-width: 900px;
+    margin: 4rem auto;
+    max-width: 1400px;
     width: 100%;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* FAQ grid layout - two columns with staggered right column */
+.faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 2.5rem;
+    width: 100%;
+}
+
+.faq-grid .faq-item {
+    background: transparent;
+    padding: 0.25rem 0;
+}
+
+.faq-grid .faq-item.offset {
+    margin-top: 0; /* no visual offset to keep grid tidy */
+}
+
+@media (max-width: 900px) {
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+    .faq-grid .faq-item.offset {
+        margin-top: 0;
+    }
 }
 
 .faq-title {
@@ -262,7 +311,12 @@
     font-size: clamp(1.5rem, 3vw, 2rem);
     margin-bottom: 2rem;
     font-weight: 600;
-    text-align: left;
+    text-align: center;
+}
+
+/* Ensure FAQ title is centered inside section-5 specifically */
+.landing-section.section-5 .faq-title {
+    text-align: center;
 }
 
 .faq-container {
@@ -290,6 +344,7 @@
     font-size: clamp(0.9rem, 1.5vw, 1rem);
     margin: 0;
     opacity: 0.85;
+    margin-left: 1.5rem;
 }
 
 /* CTA BUTTONS */
