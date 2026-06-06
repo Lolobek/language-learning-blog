@@ -270,7 +270,7 @@
 .landing-section.section-5 {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     padding: clamp(1.5rem, 3vw, 2.5rem);
     margin: 4rem auto;
     max-width: 1400px;
@@ -321,6 +321,8 @@
 
 .faq-container {
     width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 2rem;
