@@ -45,6 +45,15 @@
     margin-top: 1rem;
 }
 
+.cta-price-text {
+    align-self: center;
+    margin-top: 0.75rem;
+    color: rgba(44, 44, 44, 0.6);
+    font-size: 0.84rem;
+    font-style: italic;
+    text-align: center;
+}
+
 .hero-image {
     flex: 1;
     min-width: 250px;
