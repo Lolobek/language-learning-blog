@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body class="contact-page">
+    <header>
+        <h1 style="margin: 0; font-size: 1.5rem;"><a href="./index.html" style="text-decoration: none; color: inherit;">📚 Language Blog</a></h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Strona główna</a></li>
+                <li><a href="./articles.html">Blog</a></li>
+                <li><a href="./landing-page.html">Książka</a></li>
+            </ul>
+        </nav>
+        <button class="hamburger" aria-label="Toggle menu">☰</button>
+    </header>
+
+    <main>
+        <section class="section-1">
+            <div class="content-panel">
+                <h1>Kontakt</h1>
+                <p>Masz pytanie dotyczące ebooka, zamówienia lub potrzebujesz pomocy technicznej? Napisz do mnie bezpośrednio na adres:</p>
+                <p class="contact-email">mójemail@pm.me</p>
+                <p>Odpisuję osobiście, zazwyczaj w ciągu 24 godzin.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Language Learning Blog. Wszystkie prawa zastrzeżone.</p>
+            <div class="footer-links">
+                <a href="#">Regulamin sklepu</a>
+                <a href="#">Polityka prywatności</a>
+                <a href="./contact.html">Kontakt</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('.hamburger');
+            const nav = document.querySelector('nav');
+            hamburger.addEventListener('click', () => {
+                nav.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>
