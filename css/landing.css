@@ -267,12 +267,10 @@
     max-width: 700px;
     padding: 1.1rem 2.4rem;
     font-size: clamp(1rem, 1.6vw, 1.15rem);
-    white-space: nowrap;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    line-height: 1.4;
     font-weight: 700;
-}
-
-.persuasion-cta {
-    white-space: nowrap;
 }
 
 /* SECTION 5: FAQ */
