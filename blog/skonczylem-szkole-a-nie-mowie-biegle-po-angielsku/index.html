@@ -12,6 +12,7 @@
     <meta name="description" content="Lata nauki angielskiego w szkole i wciąż bariera w mówieniu? Sprawdź, dlaczego system szkolny zawodzi i jak to naprawić, by w końcu zacząć mówić płynnie.">
 
     <link rel="stylesheet" href="../../css/index.css">
+    <link rel="stylesheet" href="../../css/cookies.css">
 
     <link rel="shortcut icon" type="image/x-icon" href="../../favicon/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
@@ -27,6 +28,23 @@
     <meta property="og:description" content="Lata nauki angielskiego w szkole i wciąż bariera w mówieniu? Sprawdź, dlaczego system szkolny zawodzi i jak to szybko naprawić.">
     <meta property="og:image" content="https://fundamentypoligloty.pl/images/open-graph-image.png">
 
+    <!-- Cookie Banner Script - MUST BE FIRST -->
+    <script src="../../js/cookies.js"></script>
+
+    <!-- Google tag (gtag.js) - BLOCKED UNTIL CONSENT -->
+    <script 
+        data-tracking="google-analytics" 
+        data-src="https://www.googletagmanager.com/gtag/js?id=G-S4M422D44C"
+        type="text/plain"
+        async>
+    </script>
+    <script type="text/plain" data-tracking="google-analytics">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-S4M422D44C');
+    </script>
 </head>
 <body>
     <header>
@@ -159,6 +177,21 @@
             });
         });
     </script>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner">
+        <div class="cookie-content">
+            <p>
+                🍪 Używamy cookies, aby zapewnić Ci najlepsze doświadczenie na naszej stronie. 
+                Cookies pomagają nam analizować ruch i personalizować zawartość. 
+                <a href="../../polityka-prywatnosci/">Dowiedz się więcej</a>
+            </p>
+        </div>
+        <div class="cookie-buttons">
+            <button class="cookie-btn cookie-btn-reject" onclick="rejectCookies()">Odrzuć</button>
+            <button class="cookie-btn cookie-btn-accept" onclick="acceptCookies()">Akceptuję</button>
+        </div>
+    </div>
 
 </body>
 </html>

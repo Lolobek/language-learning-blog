@@ -12,6 +12,7 @@
     <meta name="description" content="Przestań szukać uniwersalnych metod nauki języków. Zobacz, dlaczego marketing nas oszukuje i jak krok po kroku zbudować własny, skuteczny system nauki.">
 
     <link rel="stylesheet" href="../../css/index.css">
+    <link rel="stylesheet" href="../../css/cookies.css">
 
     <link rel="shortcut icon" type="image/x-icon" href="../../favicon/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
@@ -26,6 +27,26 @@
     <meta property="og:title" content="Dlaczego 'najlepsza metoda nauki' nie istnieje i jak w jeden wieczór zbudować własną?">
     <meta property="og:description" content="Szukasz „metody cud”? Przestań tracić czas. Dowiedz się, dlaczego idealny system nie istnieje i jak stworzyć plan dopasowany do Ciebie.">
     <meta property="og:image" content="https://fundamentypoligloty.pl/images/open-graph-image.png">
+
+    <!-- Cookie Banner Script - MUST BE FIRST -->
+    <script src="../../js/cookies.js"></script>
+
+    <!-- Google tag (gtag.js) - BLOCKED UNTIL CONSENT -->
+    <script 
+        data-tracking="google-analytics" 
+        data-src="https://www.googletagmanager.com/gtag/js?id=G-S4M422D44C"
+        type="text/plain"
+        async>
+    </script>
+    <script type="text/plain" data-tracking="google-analytics">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-S4M422D44C');
+    </script>
+
+
     </head>
 <body>
     <header>
@@ -182,6 +203,21 @@
             });
         });
     </script>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner">
+        <div class="cookie-content">
+            <p>
+                🍪 Używamy cookies, aby zapewnić Ci najlepsze doświadczenie na naszej stronie. 
+                Cookies pomagają nam analizować ruch i personalizować zawartość. 
+                <a href="../../polityka-prywatnosci/">Dowiedz się więcej</a>
+            </p>
+        </div>
+        <div class="cookie-buttons">
+            <button class="cookie-btn cookie-btn-reject" onclick="rejectCookies()">Odrzuć</button>
+            <button class="cookie-btn cookie-btn-accept" onclick="acceptCookies()">Akceptuję</button>
+        </div>
+    </div>
 
 </body>
 </html>

@@ -1,0 +1,64 @@
+<!-- 
+    COOKIE BANNER - TEMPLATE DO WSTAWIENIA NA WSZYSTKIE STRONY
+
+    Instrukcja:
+    1. Skopiuj zawartość: <link rel="stylesheet" href="./css/cookies.css"> do <head>
+    2. Skopiuj zawartość: <script src="./js/cookies.js"></script> do <head> PRZED tagiem GA
+    3. Zastąp zwykły tag Google Analytics na wersję z data-tracking
+    4. Skopiuj zawartość: <div id="cookie-banner">...</div> przed zamykającym </body>
+
+    UWAGA: Ścieżki mogą różnić się dla poddirektoriów!
+    Jeśli strona jest w blog/category/index.html, zmień ścieżki na: ../../../css/cookies.css
+-->
+
+<!-- ============ W <head> ============ -->
+
+<!-- Zaraz po: <link rel="stylesheet" href="./css/index.css"> -->
+<link rel="stylesheet" href="./css/cookies.css">
+
+<!-- NAJWCZEŚNIEJ w <head>, PRZED tagami GA -->
+<script src="./js/cookies.js"></script>
+
+<!-- Zamiast zwykłego Google Analytics, użyj tej wersji: -->
+<script 
+    data-tracking="google-analytics" 
+    data-src="https://www.googletagmanager.com/gtag/js?id=G-S4M422D44C"
+    type="text/plain"
+    async>
+</script>
+<script type="text/plain" data-tracking="google-analytics">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-S4M422D44C');
+</script>
+
+
+<!-- ============ PRZED ZAMYKAJĄCYM </body> ============ -->
+
+<div id="cookie-banner">
+    <div class="cookie-content">
+        <p>
+            🍪 Używamy cookies, aby zapewnić Ci najlepsze doświadczenie na naszej stronie. 
+            Cookies pomagają nam analizować ruch i personalizować zawartość. 
+            <a href="./polityka-prywatnosci/">Dowiedz się więcej</a>
+        </p>
+    </div>
+    <div class="cookie-buttons">
+        <button class="cookie-btn cookie-btn-reject" onclick="rejectCookies()">Odrzuć</button>
+        <button class="cookie-btn cookie-btn-accept" onclick="acceptCookies()">Akceptuję</button>
+    </div>
+</div>
+
+<!-- ============ ŚCIEŻKI DLA PODDIREKTORIÓW ============ -->
+
+<!-- Dla stron w głębokich folderach (np. blog/kategoria/artykul/index.html):
+     Zamiast ./css/cookies.css użyj: ../../../css/cookies.css
+     Zamiast ./js/cookies.js użyj: ../../../js/cookies.js
+     
+     Liczba ../ zależy od głębokości folderu:
+     - blog/index.html: ../css/cookies.css
+     - blog/kategoria/index.html: ../../css/cookies.css
+     - blog/kategoria/artykul/index.html: ../../../css/cookies.css
+-->
