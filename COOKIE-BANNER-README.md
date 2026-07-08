@@ -77,8 +77,8 @@ Umieść to tuż przed zamykającym tagiem `</body>`:
 <div id="cookie-banner">
     <div class="cookie-content">
         <p>
-            🍪 Używamy cookies, aby zapewnić Ci najlepsze doświadczenie na naszej stronie. 
-            Cookies pomagają nam analizować ruch i personalizować zawartość. 
+            🍪 Dbamy o Twoją prywatność. Za Twoją zgodą chcemy używać plików cookies,
+            aby analizować ruch na stronie i ulepszać nasze treści.
             <a href="./polityka-prywatnosci/">Dowiedz się więcej</a>
         </p>
     </div>
@@ -164,8 +164,8 @@ Każda strona powinna mieć:
     <div id="cookie-banner">
         <div class="cookie-content">
             <p>
-                🍪 Używamy cookies, aby zapewnić Ci najlepsze doświadczenie na naszej stronie. 
-                Cookies pomagają nam analizować ruch i personalizować zawartość. 
+                🍪 Dbamy o Twoją prywatność. Za Twoją zgodą chcemy używać plików cookies,
+                aby analizować ruch na stronie i ulepszać nasze treści.
                 <a href="./polityka-prywatnosci/">Dowiedz się więcej</a>
             </p>
         </div>
