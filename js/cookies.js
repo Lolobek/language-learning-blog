@@ -86,9 +86,6 @@ function rejectCookies() {
 }
 
 // Initialize banner on page load
-document.addEventListener('DOMContentLoaded', initCookieBanner);
-
-// Alternative: Initialize immediately if DOM is already loaded
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initCookieBanner);
 } else {
