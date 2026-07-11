@@ -34,40 +34,30 @@ function hideCookieBanner() {
 
 // Function to enable tracking scripts
 function enableTracking() {
-    // Enable Google Analytics - inline script FIRST (definitions must be before library)
-    const gaScriptInline = document.querySelector('script[data-tracking="google-analytics"]:not([data-src])');
-    if (gaScriptInline) {
-        const newScript = document.createElement('script');
-        newScript.type = 'text/javascript';
-        newScript.textContent = gaScriptInline.textContent;
-        document.head.appendChild(newScript);
-    }
+    let trackingFound = false;
 
-    // Enable Google Analytics - external script SECOND (library loads after definitions)
-    const gaScriptExternal = document.querySelector('script[data-tracking="google-analytics"][data-src]');
-    if (gaScriptExternal) {
-        const newScript = document.createElement('script');
-        newScript.src = gaScriptExternal.getAttribute('data-src');
-        newScript.async = true;
-        document.head.appendChild(newScript);
-    }
+    // Enable all tracking scripts by type
+    const trackingScripts = document.querySelectorAll('script[data-tracking]');
+    trackingScripts.forEach(script => {
+        trackingFound = true;
+        const type = script.dataset.tracking;
+        const src = script.getAttribute('data-src');
 
-    // Enable Meta Pixel if present - inline script first
-    const metaScripts = document.querySelectorAll('script[data-tracking="meta-pixel"]:not([data-src])');
-    metaScripts.forEach(script => {
-        const newScript = document.createElement('script');
-        newScript.type = 'text/javascript';
-        newScript.textContent = script.textContent;
-        document.head.appendChild(newScript);
+        if (src) {
+            const newScript = document.createElement('script');
+            newScript.src = src;
+            newScript.async = true;
+            document.head.appendChild(newScript);
+        } else {
+            const newScript = document.createElement('script');
+            newScript.type = 'text/javascript';
+            newScript.textContent = script.textContent;
+            document.head.appendChild(newScript);
+        }
     });
 
-    // Enable Meta Pixel external if present
-    const metaScriptExternal = document.querySelector('script[data-tracking="meta-pixel"][data-src]');
-    if (metaScriptExternal) {
-        const newScript = document.createElement('script');
-        newScript.src = metaScriptExternal.getAttribute('data-src');
-        newScript.async = true;
-        document.head.appendChild(newScript);
+    if (!trackingFound) {
+        console.warn('Cookie banner: no tracking placeholders found.');
     }
 }
 
