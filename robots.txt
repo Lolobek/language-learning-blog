@@ -1,8 +1,13 @@
-User-agent: *
-Allow: /
 
-# Blokujemy przykładowy artykuł, żeby Google nie indeksowało śmieciowego tekstu
-Disallow: /text/
+User-agent: GPTBot
+Disallow: /
 
-# Wskazujemy drogę do przyszłej mapy strony
-Sitemap: https://fundamentypoligloty.pl/sitemap.xml
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
