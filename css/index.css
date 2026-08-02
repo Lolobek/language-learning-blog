@@ -300,6 +300,10 @@ section.section-2 .questions p:hover {
         gap: 1.5rem;
     }
     
+    section.section-2 .img {
+        order: -1;
+    }
+
     section.section-2 .questions,
     section.section-2 .img {
         flex-basis: auto;
