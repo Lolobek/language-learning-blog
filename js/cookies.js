@@ -64,6 +64,10 @@ function enableTracking() {
         script.remove();
     });
 
+    if (typeof window.clarity === 'function') {
+        window.clarity('consent');
+    }
+
     if (!trackingFound) {
         console.warn('Cookie banner: no tracking placeholders found.');
     }
@@ -86,6 +90,9 @@ function rejectCookies() {
 
 function disableTracking() {
     window[`ga-disable-${GOOGLE_ANALYTICS_ID}`] = true;
+    if (typeof window.clarity === 'function') {
+        window.clarity('consent', false);
+    }
     if (typeof window.gtag === 'function') {
         window.gtag('consent', 'update', {
             analytics_storage: 'denied',
