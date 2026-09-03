@@ -1,6 +1,7 @@
 // Cookie Banner Logic
 const COOKIE_CONSENT_KEY = 'cookieConsent';
 const COOKIE_CONSENT_VERSION = '1.0';
+const GOOGLE_ANALYTICS_ID = 'G-S4M422D44C';
 
 // Function to initialize the cookie banner
 function initCookieBanner() {
@@ -11,7 +12,7 @@ function initCookieBanner() {
         enableTracking();
         hideCookieBanner();
     } else {
-        // Show banner if consent not given
+        clearTrackingCookies();
         showCookieBanner();
     }
 }
@@ -36,24 +37,31 @@ function hideCookieBanner() {
 function enableTracking() {
     let trackingFound = false;
 
-    // Enable all tracking scripts by type
     const trackingScripts = document.querySelectorAll('script[data-tracking]');
     trackingScripts.forEach(script => {
+        if (script.dataset.enabled === 'true') {
+            return;
+        }
+
         trackingFound = true;
-        const type = script.dataset.tracking;
         const src = script.getAttribute('data-src');
 
         if (src) {
             const newScript = document.createElement('script');
             newScript.src = src;
             newScript.async = true;
+            newScript.dataset.consentTracking = 'true';
             document.head.appendChild(newScript);
         } else {
             const newScript = document.createElement('script');
             newScript.type = 'text/javascript';
             newScript.textContent = script.textContent;
+            newScript.dataset.consentTracking = 'true';
             document.head.appendChild(newScript);
         }
+
+        script.dataset.enabled = 'true';
+        script.remove();
     });
 
     if (!trackingFound) {
@@ -70,9 +78,46 @@ function acceptCookies() {
 
 // Function to reject cookies
 function rejectCookies() {
-    // Clear any tracking-related data
     localStorage.removeItem(COOKIE_CONSENT_KEY);
+    disableTracking();
+    clearTrackingCookies();
     hideCookieBanner();
+}
+
+function disableTracking() {
+    window[`ga-disable-${GOOGLE_ANALYTICS_ID}`] = true;
+    if (typeof window.gtag === 'function') {
+        window.gtag('consent', 'update', {
+            analytics_storage: 'denied',
+            ad_storage: 'denied'
+        });
+    }
+    document.querySelectorAll('script[data-consent-tracking]').forEach(script => script.remove());
+}
+
+function clearTrackingCookies() {
+    const cookieNames = new Set([
+        '_fbp', '_ga', `_ga_${GOOGLE_ANALYTICS_ID.replace('G-', '')}`,
+        '_gid', '_gat', '_clck', '_clsk'
+    ]);
+
+    document.cookie.split(';').forEach(cookie => {
+        cookieNames.add(cookie.split('=')[0].trim());
+    });
+
+    const domains = ['', location.hostname, location.hostname ? `.${location.hostname}` : ''];
+    const paths = ['/', location.pathname];
+
+    cookieNames.forEach(cookieName => {
+        if (/^(_fbp|_ga|_gid|_gat|_clck|_clsk)/.test(cookieName)) {
+            paths.forEach(path => {
+                domains.forEach(domain => {
+                    const domainAttribute = domain ? `; domain=${domain}` : '';
+                    document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; max-age=0; path=${path}${domainAttribute}`;
+                });
+            });
+        }
+    });
 }
 
 // Initialize banner on page load
