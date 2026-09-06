@@ -54,6 +54,10 @@
     text-align: center;
 }
 
+.hero-bullets {
+    font-size: var(--type-h4);
+}
+
 .hero-image {
     flex: 1;
     min-width: 250px;
@@ -211,7 +215,7 @@
     align-items: flex-start;
     gap: 0.75rem;
     color: var(--text-color);
-    font-size: var(--type-body);
+    font-size: var(--type-h4);
     line-height: 1.6;
 }
 
@@ -401,7 +405,7 @@
     padding: 0.9rem 1.8rem;
     border-radius: 25px;
     font-weight: 600;
-    font-size: var(--type-body);
+    font-size: var(--type-h4);
     cursor: pointer;
     transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     border: none;
@@ -429,7 +433,7 @@ footer {
     background: var(--text-color);
     color: white;
     padding: 2rem;
-    margin-top: 4rem;
+    margin-top: 0rem;
     font-size: var(--type-small);
 }
 
@@ -473,7 +477,7 @@ footer {
     .landing-table th,
     .landing-table td {
         padding: 0.8rem;
-        font-size: var(--type-small);
+        font-size: var(--type-body);
     }
     
     .table-chapter {
@@ -484,10 +488,11 @@ footer {
 @media (max-width: 480px) {
     .landing-hero {
         padding: 1rem;
+        margin-top: 0;
     }
 
     .landing-table {
-        font-size: var(--type-small);
+        font-size: var(--type-body);
     }
 
     .landing-table th,

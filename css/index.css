@@ -10,7 +10,7 @@
 
     /* SKALA TYPOGRAFICZNA - major third (1.25) */
     --type-small     : 0.833rem; /* ~13.3px */
-    --type-body      : 1rem;     /* 16px (baza) */
+    --type-body      : 1.200rem;     /* 16px (baza) */
     --type-h4        : 1.200rem; /* ~19.2px */
     --type-h3        : 1.440rem; /* ~23px */
     --type-h2        : 1.728rem; /* ~27.6px */
