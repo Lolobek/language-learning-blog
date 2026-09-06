@@ -132,13 +132,14 @@
     padding: 1.2rem;
     text-align: left;
     font-weight: 700;
-    font-size: var(--type-body);
+    font-size: var(--type-h3);
 }
 
 .landing-table td {
     padding: 1rem 1.2rem;
     border-bottom: 1px solid rgba(44, 44, 44, 0.1);
     color: var(--text-color);
+    font-size: var(--type-h4);
 }
 
 .landing-table tr:last-child td {
@@ -474,10 +475,15 @@ footer {
         gap: 0.5rem;
     }
 
-    .landing-table th,
+    .landing-table th {
+        padding: 0.8rem;
+        font-size: var(--type-h3);
+    }
+
+
     .landing-table td {
         padding: 0.8rem;
-        font-size: var(--type-body);
+        font-size: var(--type-h4);
     }
     
     .table-chapter {
