@@ -554,15 +554,19 @@ section.section-3 .buttons a {
 .article-card h3 {
     margin: 0.75rem 0 0.25rem;
     color: var(--text-color);
-    font-size: 1.05rem;
+    font-size: var(--type-h3);
     min-height: 5.2rem;
     display: flex;
     align-items: flex-start;
 }
 
+.article-card h2 {
+    margin-top: 2.5rem !important;
+}
+
 .article-meta {
     color: #6b7280;
-    font-size: 0.9rem;
+    font-size: var(--type-small);
     margin-bottom: 0.5rem;
 }
 
@@ -571,6 +575,7 @@ section.section-3 .buttons a {
     color: var(--text-color);
     opacity: 0.85;
     flex: 1;
+    font-size: var(--type-h4);
 }
 
 .read-more {
@@ -700,7 +705,7 @@ section.section-3 .buttons a {
 .home-problem h2 {
     margin: 0 0 1rem;
     color: var(--text-color);
-    font-size: var(--type-h4);
+    font-size: var(--type-h3);
     line-height: 1.35;
 }
 
@@ -709,7 +714,7 @@ section.section-3 .buttons a {
 .home-path p:not(.home-path-label) {
     margin: 0;
     color: rgba(44, 44, 44, 0.78);
-    font-size: var(--type-body);
+    font-size: var(--type-h4);
     line-height: 1.65;
 }
 
