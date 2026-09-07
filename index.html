@@ -32,6 +32,7 @@
     
     <title>Fundamenty Poligloty - Opanuj język obcy</title>
     <meta name="description" content="Odkryj skuteczne metody nauki języków. Pobierz e-book 'Fundamenty Poligloty' i zacznij mówić płynnie bez nudnej gramatyki!">
+    <link rel="canonical" href="https://fundamentypoligloty.pl/">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -56,6 +57,7 @@
     <meta property="og:title" content="Fundamenty Poligloty | Jak szybko opanować język obcy">
     <meta property="og:description" content="Odkryj skuteczne metody nauki języków. Przełam barierę językową i zacznij mówić płynnie bez nudnej gramatyki!">
     <meta property="og:image" content="https://fundamentypoligloty.pl/images/open-graph-image.webp">
+    <meta property="og:image:alt" content="Fundamenty Poligloty - nauka języków obcych">
 
     <script src="./js/cookies.js" defer></script>
 
@@ -75,15 +77,15 @@
 
 <body class="home-page">
     <header>
-        <h1 style="margin: 0; font-size: var(--type-h4);">📚 Fundamenty Poligloty</h1>
-        <nav>
+        <h1 class="site-title">📚 Fundamenty Poligloty</h1>
+        <nav id="site-navigation">
             <ul>
                 <li class="active"><a href="./index.html">Strona główna</a></li>
                 <li><a href="./blog/">Blog</a></li>
                 <li><a href="./ebook">Książka</a></li>
             </ul>
         </nav>
-        <button class="hamburger" aria-label="Toggle menu">☰</button>
+        <button class="hamburger" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="site-navigation">☰</button>
     </header>
 
     <main class="home-main">
@@ -157,7 +159,9 @@
             const hamburger = document.querySelector('.hamburger');
             const nav = document.querySelector('nav');
             hamburger.addEventListener('click', () => {
-                nav.classList.toggle('open');
+                const isOpen = nav.classList.toggle('open');
+                hamburger.setAttribute('aria-expanded', String(isOpen));
+                hamburger.setAttribute('aria-label', isOpen ? 'Zamknij menu' : 'Otwórz menu');
             });
         });
     </script>

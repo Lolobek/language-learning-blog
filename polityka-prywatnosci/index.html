@@ -56,6 +56,7 @@
     <meta property="og:title" content="Polityka prywatności - Fundamenty Poligloty">
     <meta property="og:description" content="Poznaj zasady przetwarzania danych osobowych, cookies i analityki na stronie Fundamenty Poligloty.">
     <meta property="og:image" content="https://fundamentypoligloty.pl/images/open-graph-image.webp">
+    <meta property="og:image:alt" content="Fundamenty Poligloty - polityka prywatności">
 
     <script src="../js/cookies.js" defer></script>
 
@@ -74,26 +75,26 @@
 </head>
 <body class="policy-page">
     <header>
-        <h1 style="margin: 0; font-size: 1.5rem;"><a href="../index.html" style="text-decoration: none; color: inherit;">📚 Fundamenty Poligloty</a></h1>
-        <nav>
+        <h1 class="site-title"><a href="../index.html">📚 Fundamenty Poligloty</a></h1>
+        <nav id="site-navigation">
             <ul>
                 <li><a href="../index.html">Strona główna</a></li>
                 <li><a href="../blog/">Blog</a></li>
                 <li><a href="../ebook/">Książka</a></li>
             </ul>
         </nav>
-        <button class="hamburger" aria-label="Toggle menu">☰</button>
+        <button class="hamburger" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="site-navigation">☰</button>
     </header>
     <main>
         <section>
-            <section style="margin-bottom: 2em; text-align: center;">
+            <section class="legal-intro">
                 <small>
                     Polityka prywatności z dnia 24.08.2026.<br>
 <!--                    Numer licencji nadanej przez Kreator Legal Geek: <a href="https://kreator.legalgeek.pl/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">9b6d2ab8-10ac-42b1-be5b-60882779fa13</a>.
             -->
                 </small>
             </section>
-            <h1 document-name="privacyPolicy" class="document-heading center" style="text-align: center;">
+            <h1 document-name="privacyPolicy" class="document-heading center legal-heading">
                 Polityka prywatności Sklepu Fundamenty Poligloty<br>
                 <a href="https://www.fundamentypoligloty.pl" target="_blank" rel="noopener noreferrer">https://<wbr>www.<wbr>fundamentypoligloty.<wbr>pl</a><br>
                 („Sklep”)
@@ -303,7 +304,9 @@
             const hamburger = document.querySelector('.hamburger');
             const nav = document.querySelector('nav');
             hamburger.addEventListener('click', () => {
-                nav.classList.toggle('open');
+                const isOpen = nav.classList.toggle('open');
+                hamburger.setAttribute('aria-expanded', String(isOpen));
+                hamburger.setAttribute('aria-label', isOpen ? 'Zamknij menu' : 'Otwórz menu');
             });
         });
     </script>

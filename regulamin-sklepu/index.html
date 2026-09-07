@@ -31,6 +31,7 @@
 
     <title>Fundamenty Poligloty - Regulamin sklepu</title>
     <meta name="description" content="Regulamin sklepu Fundamenty Poligloty: zasady sprzedaży, płatności, reklamacje i prawo odstąpienia.">
+    <link rel="canonical" href="https://fundamentypoligloty.pl/regulamin-sklepu/">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,6 +56,7 @@
     <meta property="og:title" content="Regulamin sklepu - Fundamenty Poligloty">
     <meta property="og:description" content="Zasady zakupów, reklamacji i przetwarzania danych w sklepie Fundamenty Poligloty.">
     <meta property="og:image" content="https://fundamentypoligloty.pl/images/open-graph-image.webp">
+    <meta property="og:image:alt" content="Fundamenty Poligloty - regulamin sklepu">
 
     <script src="../js/cookies.js" defer></script>
 
@@ -73,21 +75,21 @@
 </head>
 <body class="policy-page">
     <header>
-        <h1 style="margin: 0; font-size: 1.5rem;"><a href="../index.html" style="text-decoration: none; color: inherit;">📚 Fundamenty Poligloty</a></h1>
-        <nav>
+        <h1 class="site-title"><a href="../index.html">📚 Fundamenty Poligloty</a></h1>
+        <nav id="site-navigation">
             <ul>
                 <li><a href="../index.html">Strona główna</a></li>
                 <li><a href="../blog/">Blog</a></li>
                 <li><a href="../ebook/">Książka</a></li>
             </ul>
         </nav>
-        <button class="hamburger" aria-label="Toggle menu">☰</button>
+        <button class="hamburger" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="site-navigation">☰</button>
     </header>
 
     <main >
 
         <section>
-            <section style="margin-bottom: 2em; text-align: center;">
+            <section class="legal-intro">
                 <small>
                     Regulamin sklepu internetowego z dnia 04.07.2026.<br>
                 <!--            Numer licencji nadanej przez Kreator Legal Geek: <a href="https://kreator.legalgeek.pl/" target="_blank" style="text-decoration: none; color: inherit;">9b6d2ab8-10ac-42b1-be5b-60882779fa13</a>.
@@ -95,10 +97,10 @@
                 </small>
             </section>
 
-            <h1 document-name="regulations" class="document-heading center" style="text-align: center;">Regulamin sklepu
+            <h1 document-name="regulations" class="document-heading center legal-heading">Regulamin sklepu
                 internetowego Fundamenty Poligloty</h1>
 
-            <p class="center" style="text-align: center;">
+            <p class="center legal-center">
                         określający m.in. zasady zawierania umów poprzez Sklep, zawierający najważniejsze informacje o Sprzedawcy, Sklepie oraz o prawach Konsumenta
                 </p>
 
@@ -318,7 +320,7 @@
 
 
         <ol type="A">
-                        <li style="margin-top: 1em;">
+                        <li class="legal-spaced">
                     <b>Treści cyfrowe</b>
                     <ol>
                         <li>
@@ -370,7 +372,7 @@
 
                     </ol>
                 </li>
-                <li style="margin-top: 1em;">
+                <li class="legal-spaced">
                 <b>Pozasądowe sposoby rozpatrywania reklamacji i dochodzenia roszczeń</b>
 
                 <ol>
@@ -592,7 +594,9 @@
             const hamburger = document.querySelector('.hamburger');
             const nav = document.querySelector('nav');
             hamburger.addEventListener('click', () => {
-                nav.classList.toggle('open');
+                const isOpen = nav.classList.toggle('open');
+                hamburger.setAttribute('aria-expanded', String(isOpen));
+                hamburger.setAttribute('aria-label', isOpen ? 'Zamknij menu' : 'Otwórz menu');
             });
         });
     </script>

@@ -229,7 +229,7 @@
 }
 
 .x-mark {
-    color: #dc2626;
+    color: var(--danger-color);
     font-weight: bold;
     font-size: 1.3rem;
     flex-shrink: 0;
@@ -307,16 +307,9 @@
     min-width: 0;
 }
 
-.faq-grid .faq-item.offset {
-    margin-top: 0; /* no visual offset to keep grid tidy */
-}
-
 @media (max-width: 900px) {
     .faq-grid {
         grid-template-columns: 1fr;
-    }
-    .faq-grid .faq-item.offset {
-        margin-top: 0;
     }
 }
 

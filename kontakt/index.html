@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow">
-
     <title>Fundamenty Poligloty - Kontakt</title>
     <meta name="description" content="Masz pytania dotyczące e-booka, bloga lub współpracy? Skontaktuj się ze mną. Napisz wiadomość, a chętnie odpowiem i pomogę Ci w językowej przygodzie!">
+    <link rel="canonical" href="https://fundamentypoligloty.pl/kontakt/">
 
     <!-- WINDOWS CLARITY-->
     <script type="text/plain" data-tracking="clarity">
@@ -56,6 +55,7 @@
     <meta property="og:title" content="Skontaktuj się ze mną – Fundamenty Poligloty">
     <meta property="og:description" content="Masz pytania dotyczące e-booka, bloga lub metod nauki? Napisz do mnie – chętnie pomogę Ci w Twojej językowej przygodzie!">
     <meta property="og:image" content="https://fundamentypoligloty.pl/images/open-graph-image.webp">
+    <meta property="og:image:alt" content="Fundamenty Poligloty - kontakt">
 
     <script src="../js/cookies.js" defer></script>
 
@@ -75,15 +75,15 @@
 
 <body class="contact-page">
     <header>
-        <h1 style="margin: 0; font-size: 1.5rem;"><a href="../index.html" style="text-decoration: none; color: inherit;">📚 Fundamenty Poligloty</a></h1>
-        <nav>
+        <h1 class="site-title"><a href="../index.html">📚 Fundamenty Poligloty</a></h1>
+        <nav id="site-navigation">
             <ul>
                 <li><a href="../index.html">Strona główna</a></li>
                 <li><a href="../blog/">Blog</a></li>
                 <li><a href="../ebook/">Książka</a></li>
             </ul>
         </nav>
-        <button class="hamburger" aria-label="Toggle menu">☰</button>
+        <button class="hamburger" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="site-navigation">☰</button>
     </header>
 
     <main>
@@ -113,7 +113,9 @@
             const hamburger = document.querySelector('.hamburger');
             const nav = document.querySelector('nav');
             hamburger.addEventListener('click', () => {
-                nav.classList.toggle('open');
+                const isOpen = nav.classList.toggle('open');
+                hamburger.setAttribute('aria-expanded', String(isOpen));
+                hamburger.setAttribute('aria-label', isOpen ? 'Zamknij menu' : 'Otwórz menu');
             });
         });
     </script>

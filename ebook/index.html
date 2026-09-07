@@ -31,6 +31,7 @@
 
     <title>Fundamenty Poligloty - Książka</title>
     <meta name="description" content="Pobierz e-book „Fundamenty Poligloty” i w końcu opanuj język obcy. Poznaj praktyczne metody bez nudnej gramatyki i zacznij mówić płynnie!">
+    <link rel="canonical" href="https://fundamentypoligloty.pl/ebook/">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -56,6 +57,7 @@
     <meta property="og:title" content="Książka „Fundamenty Poligloty” – Kup e-book">
     <meta property="og:description" content="Poznaj praktyczne metody nauki języka bez nudnej gramatyki. Sprawdź spis treści!">
     <meta property="og:image" content="https://fundamentypoligloty.pl/images/open-graph-image.webp">
+    <meta property="og:image:alt" content="Fundamenty Poligloty - ebook o nauce języków">
 
     <script src="../js/cookies.js" defer></script>
 
@@ -75,29 +77,6 @@
 
 <body>
 
-<!--
-    
-    Usunięcie tego komentarza przywróci nazwę strony wypośrodkowaną
-
-    <header style="display: flex; justify-content: center; align-items: center;">
-        <h1 style="margin: 0; font-size: 1.5rem;"><a href="../index.html" style="text-decoration: none; color: inherit;">📚 Fundamenty Poligloty</a></h1>
--->
-
-<!--
-    
-    Usunięcie tego komentarza oraz usunięcie style="" w elemencie <header> przywróci oryginalną nawigację i nazwę stronę 
-    
-        <nav>
-            <ul>
-                <li><a href="../index.html">Strona główna</a></li>
-                <li><a href="../blog/">Blog</a></li>
-                <li class="active"><a href="../ebook/">Książka</a></li>
-            </ul>
-        </nav>
-        <button class="hamburger" aria-label="Toggle menu">☰</button>
--->    
-    </header>
-
     <main>
         <!-- SEKCJA 1: HERO SECTION -->
         <section class="landing-hero">
@@ -115,7 +94,7 @@
                 <p class="cta-price-text">Natychmiastowy dostęp za jedyne 20zł</p>
             </div>
             <div class="hero-image">
-                <img src="../images/cover-mockup.webp" alt="Okładka książki Fundamenty Poligloty" class="image-placeholder">
+                <img src="../images/cover-mockup.webp" alt="Okładka książki Fundamenty Poligloty" class="image-placeholder" decoding="async">
             </div>
         </section>
 
@@ -222,7 +201,7 @@
                             <p class="faq-question">❓ Czy moja płatność jest bezpieczna?</p>
                             <p class="faq-answer">Tak. Proces zakupowy obsługuje sprawdzony system 1koszyk, a za natychmiastowe i bezpieczne przetwarzanie płatności (BLIK, szybki przelew, karta) odpowiada krajowa instytucja płatnicza Autopay S.A., nadzorowana przez Komisję Nadzoru Finansowego (KNF)
                                 <a href="https://1ct.eu/KBR0z">
-                                  <img src="../images/396x51-pay.png" alt="Metody płatności" style= vertical-align:middle; />
+                                  <img src="../images/396x51-pay.png" alt="Metody płatności" class="payment-methods" loading="lazy" decoding="async">
                                 </a>
                             </p>
                         </div>              
@@ -298,7 +277,9 @@
                 return;
             }
             hamburger.addEventListener('click', () => {
-                nav.classList.toggle('open');
+                const isOpen = nav.classList.toggle('open');
+                hamburger.setAttribute('aria-expanded', String(isOpen));
+                hamburger.setAttribute('aria-label', isOpen ? 'Zamknij menu' : 'Otwórz menu');
             });
         });
     </script>
